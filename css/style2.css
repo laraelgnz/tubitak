@@ -1,0 +1,184 @@
+body {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+.bg-color {
+   background: black;
+}
+
+/* bölüm kartları */
+.card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(190, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.step-card {
+  position: relative;
+  padding-left: 4.5rem;
+}
+
+.step-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.requirement-item {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 2px solid #f3f4f6;
+  transition: all 0.3s ease;
+}
+
+.requirement-item:hover {
+  border-color: var(--primary-color);
+  transform: translateX(4px);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 1.5rem;
+  top: 3.5rem;
+  width: 2px;
+  height: calc(100% - 3rem);
+  background: linear-gradient(to bottom, var(--primary-color), transparent);
+}
+
+.decorative-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+
+.download-btn {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px dashed #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  border-color: var(--primary-color);
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.05),
+    rgba(168, 85, 247, 0.05)
+  );
+  transform: scale(1.02);
+}
+/* HERO / YETENEK SINAVI BAŞLIĞI ARKA PLAN */
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #0b1d3a 0%,
+    #122b5e 50%,
+    #1e3a8a 100%
+  );
+}
+
+
+
+
+.dark body {
+  background: #0e1117 !important;
+  color: #e6e8eb !important;
+}
+
+/* Beyaz kartları koyulaştır */
+.dark .card,
+.dark .requirement-item,
+.dark .download-btn {
+  background: #1b2430 !important;
+  border-color: rgba(255,255,255,0.12) !important;
+}
+
+
+.dark .download-btn:hover {
+  background: rgba(255,255,255,0.06) !important;
+}
+
+
+.dark .text-gray-900 { color: #f3f4f6 !important; }
+.dark .text-gray-600 { color: #cbd5e1 !important; }
+.dark .text-gray-500 { color: #94a3b8 !important; }
+.dark .text-gray-400 { color: #94a3b8 !important; }
+
+
+.dark .bg-white { background: #0f172a !important; }
+.dark .bg-gray-100 { background: #111827 !important; }
+.dark .bg-gray-200 { background: #1f2937 !important; }
+
+/* Border’lar */
+.dark .border-gray-200 { border-color: rgba(255,255,255,0.12) !important; }
+.dark .border-gray-300 { border-color: rgba(255,255,255,0.18) !important; }
+
+.dark .gradient-bg {
+  background: linear-gradient(135deg, #070b14 0%, #0b1220 50%, #111b33 100%) !important;
+}

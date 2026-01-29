@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YTÜ Yetenek Sınavı Kılavuzu</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    @view-transition { navigation: auto; }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content">
+      <div class="logo">
+        <img src="./images/yildiz-teknik-universitesi-logo-tr_3.png" alt="YTÜ Logo">
+      </div>
+
+      <nav class="nav">
+        <a href="#programs">Programlar</a>
+        <a href="#faq">SSS</a>
+        <a href="#footer">İletişim</a>
+
+        <div class="theme-toggle">
+          <button id="lightBtn" type="button" class="theme-btn active" aria-label="Gündüz modu">☀️</button>
+          <button id="darkBtn" type="button" class="theme-btn" aria-label="Gece modu">🌙</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 id="main-title">YTÜ Yetenek Sınavı Kılavuzu</h1>
+      <p id="subtitle">Başvuru, Sınav İçerikleri</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <section id="programs">
+      <h2 class="section-title">Bölümler</h2>
+
+      <div class="programs-grid">
+        <a href="bileşik.html" target="_blank" style="text-decoration:none;">
+          <div class="program-card">
+            <h3>Bileşik Sanatlar</h3>
+            <p>Çoklu disiplinlerde yaratıcı düşünme, uygulama ve ifade becerilerinizi ölçen, sanatsal altyapınızı değerlendiren kapsamlı yetenek sınavı sürecidir.
+
+              </p>
+          </div>
+        </a>
+
+        <a href="grafik.html" target="_blank" style="text-decoration:none;">
+          <div class="program-card">
+            <h3>Grafik Tasarım</h3>
+            <p>Görsel iletişim, tipografi, kompozisyon ve yaratıcı problem çözme becerilerinizi ölçen uygulamalı ve çok aşamalı yetenek sınavıdır.</p>
+          </div>
+        </a>
+
+        <a href="ses.html" target="_blank" style="text-decoration:none;">
+          <div class="program-card">
+            <h3>Ses Sanatları Tasarımı</h3>
+            <p>İşitsel algı, müzikal yetenek, ses teknolojileri ve yaratıcı üretim becerilerinizi ölçen özel değerlendirme sürecidir.
+</p>
+          </div>
+        </a>
+
+        <a href="müzik.html" target="_blank" style="text-decoration:none;">
+          <div class="program-card">
+            <h3>Müzik ve Sahne Sanatları</h3>
+            <p>Performans yeteneği, müzikal ifade ve yaratıcı yorum gücünüzü ölçen çok aşamalı sınav.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2 class="section-title">Sık Sorulan Sorular</h2>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Başvuru için hangi belgeler gerekli?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Başvuru için; üstünde TC Kimlik numarası bulunan fotoğraflı, onaylı nüfus cüzdanı, pasaport veya ehliyetin aslı.
+            Ön kayıt sonrası web sayfasından alınacak Sınav Giriş Belgesi çıktısı.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Sınav tarihleri ne zaman açıklanacak?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Güncel tarihler için web sitemizi ve resmi duyuru kanallarımızı takip ediniz.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Portfolyo hazırlamam gerekiyor mu?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Hayır herhangi bir portfolyo hazırlığı gerekmiyor.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Sınav kaç saat sürüyor?</span>
+          <span class="faq-icon">▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Bileşik Sanatlar 120 dakika. Grafik Tasarım 90 dakika. Müzik Toplulukları 2 aşama (dakika belirtilmemiş).
+            Ses Sanatları Tasarımı 2 aşama (dakika belirtilmemiş).</p>
+        </div>
+      </div>
+    </section>
+
+<h2 class="section-title">Konum Bilgisi</h2>
+
+    <section id="video" style="margin-bottom:80px;">
+      <div style="display:flex; justify-content:center;">
+        <video src="./images/harita2.mov" controls style="width:70%;"></video>
+      </div>
+    </section>
+  </div>
+
+  <footer class="footer" id="footer">
+    <p>© 2024 Yıldız Teknik Üniversitesi. Tüm hakları saklıdır.</p>
+    <p>Yıldız Teknik Üniversitesi Sanat ve Tasarım Fakültesi Kışla Binası |
+      Telefon: 0212 383 50 01 /111 |
+      E-posta: satas@yildiz.edu.tr</p>
+  </footer>
+
+  <script>
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+      answer.classList.toggle('open');
+      icon.classList.toggle('open');
+    }
+  </script>
+
+ 
+  <script src="js/main.js"></script>
+</body>
+</html>
