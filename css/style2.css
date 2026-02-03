@@ -10,7 +10,7 @@ body {
 
 
 .bg-color {
-   background: black;
+  background: black;
 }
 
 /* bölüm kartları */
@@ -89,10 +89,12 @@ body {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-20px) rotate(5deg);
   }
@@ -126,21 +128,18 @@ body {
 
 .download-btn:hover {
   border-color: var(--primary-color);
-  background: linear-gradient(
-    135deg,
-    rgba(99, 102, 241, 0.05),
-    rgba(168, 85, 247, 0.05)
-  );
+  background: linear-gradient(135deg,
+      rgba(99, 102, 241, 0.05),
+      rgba(168, 85, 247, 0.05));
   transform: scale(1.02);
 }
+
 /* HERO / YETENEK SINAVI BAŞLIĞI ARKA PLAN */
 .gradient-bg {
-  background: linear-gradient(
-    135deg,
-    #0b1d3a 0%,
-    #122b5e 50%,
-    #1e3a8a 100%
-  );
+  background: linear-gradient(135deg,
+      #0b1d3a 0%,
+      #122b5e 50%,
+      #1e3a8a 100%);
 }
 
 
@@ -156,29 +155,100 @@ body {
 .dark .requirement-item,
 .dark .download-btn {
   background: #1b2430 !important;
-  border-color: rgba(255,255,255,0.12) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
 }
 
 
 .dark .download-btn:hover {
-  background: rgba(255,255,255,0.06) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
 }
 
 
-.dark .text-gray-900 { color: #f3f4f6 !important; }
-.dark .text-gray-600 { color: #cbd5e1 !important; }
-.dark .text-gray-500 { color: #94a3b8 !important; }
-.dark .text-gray-400 { color: #94a3b8 !important; }
+.dark .text-gray-900 {
+  color: #f3f4f6 !important;
+}
+
+.dark .text-gray-600 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-gray-500 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-gray-400 {
+  color: #94a3b8 !important;
+}
 
 
-.dark .bg-white { background: #0f172a !important; }
-.dark .bg-gray-100 { background: #111827 !important; }
-.dark .bg-gray-200 { background: #1f2937 !important; }
+.dark .bg-white {
+  background: #0f172a !important;
+}
+
+.dark .bg-gray-100 {
+  background: #111827 !important;
+}
+
+.dark .bg-gray-200 {
+  background: #1f2937 !important;
+}
 
 /* Border’lar */
-.dark .border-gray-200 { border-color: rgba(255,255,255,0.12) !important; }
-.dark .border-gray-300 { border-color: rgba(255,255,255,0.18) !important; }
+.dark .border-gray-200 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.dark .border-gray-300 {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
 
 .dark .gradient-bg {
   background: linear-gradient(135deg, #070b14 0%, #0b1220 50%, #111b33 100%) !important;
+}
+
+
+/* =========================
+   GARANTİ DARK MODE FIX
+   (Tailwind dark çalışmasa bile)
+   ========================= */
+
+/* Asıl sorun: sayfa zemini açık kalıyor -> app-wrapper'ı zorla koyulaştır */
+.dark #app-wrapper {
+  background: linear-gradient(to bottom, #070b14, #0b1220) !important;
+}
+
+/* Bazı cihazlarda body açık kalabiliyor -> body'yi de garantiye al */
+.dark body {
+  background: #070b14 !important;
+  color: #e6e8eb !important;
+}
+
+/* Başvuru bölümü (transparent kalsın, arkadan koyu zemin görünsün) */
+.dark #basvuru {
+  background: transparent !important;
+}
+
+/* Beyaz olan section'lar (sinav, belgeler) koyulaşsın */
+.dark #sinav,
+.dark #belgeler {
+  background: #0b1220 !important;
+}
+
+/* Üstteki sticky hızlı menü beyaz kalmasın */
+.dark #quick-nav {
+  background: rgba(17, 24, 39, 0.92) !important;
+  /* slate-900 gibi */
+  backdrop-filter: blur(10px);
+}
+
+/* Hızlı menü butonları */
+.dark #quick-nav a {
+  background: #1f2937 !important;
+  /* slate-800 */
+  color: #e5e7eb !important;
+}
+
+.dark #quick-nav a:hover {
+  background: #374151 !important;
+  /* slate-700 */
 }
